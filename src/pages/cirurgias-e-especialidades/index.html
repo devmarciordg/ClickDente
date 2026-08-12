@@ -43,36 +43,57 @@
   <body>
     <html-include name="page-loader" />
 
-    <html-include name="header" data-active="cirurgias" />
+    <html-include name="header-lp" />
 
     <main id="main-content">
-      <!-- HERO -->
-      <section class="hero section" aria-labelledby="hero-title">
-        <div class="container split">
-          <div class="hero__content">
-            <span class="eyebrow">Cirurgias e Especialidades</span>
-            <h1 id="hero-title" class="section-title">
-              Alívio Imediato para a Sua Dor, com o Conforto que Você
-              Merece.
+      <!-- HERO QUOTE-LED -->
+      <section class="quote-hero" aria-labelledby="hero-title">
+        <div class="container quote-hero__inner">
+          <div>
+            <blockquote class="quote-hero__quote">
+              Acordei com meu siso inflamado, marquei avaliação e extraí no
+              mesmo dia e quase não senti dores. Super tranquilo.
+            </blockquote>
+            <p class="quote-hero__attrib">
+              <span class="quote-hero__name">Nikholas Gherardi</span>
+              <span class="quote-hero__source"
+                ><svg-load name="star" /> Avaliação no Google</span
+              >
+            </p>
+
+            <h1 id="hero-title" class="hero__title">
+              Alívio para a sua dor, sem sustos.
             </h1>
             <p class="section-subtitle">
-              Canal, extrações e cuidado periodontal com anestesia de alta
-              precisão, sem dor, sem sustos.
+              Canal, extrações e cuidado de gengiva com anestesia de alta
+              precisão. Você controla o ritmo, do início ao fim.
             </p>
-            <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20tratamento%20de%20dor%2Fcirurgia."
-              class="btn btn--primary"
-              id="cta-whatsapp-hero-cirurgias"
-              aria-label="Agende sua avaliação via WhatsApp"
-              data-tracking="whatsapp-hero-cirurgias"
-              target="_blank"
-              rel="noopener"
-            >
-              <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp
-            </a>
+
+            <div class="quote-hero__actions">
+              <a
+                href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Estou%20com%20dor%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                class="btn btn--primary"
+                id="cta-whatsapp-hero-cirurgias"
+                aria-label="Agendar avaliação pelo WhatsApp"
+                data-tracking="whatsapp-hero-cirurgias"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg-load name="whatsapp" />
+                Agendar avaliação
+              </a>
+              <a
+                href="#duvidas"
+                class="quote-hero__secondary"
+                id="anchor-duvidas-cirurgias"
+                aria-label="Ver dúvidas frequentes"
+                data-tracking="anchor-duvidas-cirurgias"
+                >Ver dúvidas frequentes <svg-load name="chevron-down"
+              /></a>
+            </div>
           </div>
-          <div class="hero__media">
+
+          <div class="quote-hero__media">
             <picture>
               <source
                 srcset="
@@ -95,114 +116,177 @@
         </div>
       </section>
 
-      <!-- CONFORTO -->
-      <section
-        class="section"
-        style="background-color: var(--color-bg-alt)"
-        aria-labelledby="conforto-title"
-      >
-        <div class="container" style="max-width: 760px; text-align: center">
-          <span class="eyebrow">Nossa Prioridade</span>
-          <h2 id="conforto-title" class="section-title">
-            O Seu Conforto é a Nossa Maior Prioridade.
+      <html-include name="prova-social-compacta" />
+
+      <!-- MIOLO · variante Urgência: FAQ conversacional -->
+      <section class="section" id="duvidas" aria-labelledby="duvidas-title">
+        <div class="container" style="max-width: 720px">
+          <h2 id="duvidas-title" class="section-title">
+            O que todo mundo pergunta antes de vir
           </h2>
-          <p class="section-subtitle" style="margin-inline: auto">
-            Explicamos cada etapa do procedimento antes de começar,
-            garantimos 100% de anestesia eficaz e você pode pedir uma pausa
-            a qualquer momento. O controle é sempre seu.
-          </p>
-        </div>
-      </section>
 
-      <!-- ESPECIALIDADES -->
-      <section class="section" aria-labelledby="especialidades-title">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Nossas Especialidades</span>
-            <h2 id="especialidades-title" class="section-title">
-              Soluções Precisas para Cada Tipo de Dor
-            </h2>
-          </div>
-
-          <div class="grid grid--3">
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="shield-check" /></span>
-                <h3 class="card__title">Endodontia (Canal)</h3>
-              </div>
-              <p class="card__text">
-                Tecnologia moderna para um tratamento rápido, seguro e
-                indolor que salva o dente e elimina a infecção.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="check" /></span>
-                <h3 class="card__title">Cirurgias e Extrações</h3>
-              </div>
-              <p class="card__text">
-                Técnica minimamente invasiva (inclusive para sisos), com
-                pós-operatório tranquilo e recuperação rápida.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="heart" /></span>
-                <h3 class="card__title">Periodontia (Gengiva)</h3>
-              </div>
-              <p class="card__text">
-                Gengiva que sangra não é normal. Tratamos gengivite e
-                periodontite, prevenindo a perda de dentes.
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-dor"
+              aria-expanded="false"
+              aria-controls="faq-panel-dor"
+              data-accordion-trigger
+            >
+              Vou sentir dor durante o procedimento?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-dor">
+              <p>
+                Não começamos enquanto a anestesia não estiver completa, e
+                explicamos cada etapa antes de agir. Você pode pedir uma pausa a
+                qualquer momento — o controle é seu do início ao fim.
               </p>
             </div>
           </div>
 
-          <div style="text-align: center; margin-top: var(--space-lg)">
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-canal"
+              aria-expanded="false"
+              aria-controls="faq-panel-canal"
+              data-accordion-trigger
+            >
+              Preciso mesmo fazer canal? Não dá para extrair?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-canal">
+              <p>
+                Sempre que o dente puder ser salvo, salvar é o melhor caminho — o
+                canal elimina a infecção e mantém o dente na boca. A extração
+                entra quando não há mais estrutura que o sustente, e essa decisão
+                é tomada com você, depois do diagnóstico.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-recuperacao"
+              aria-expanded="false"
+              aria-controls="faq-panel-recuperacao"
+              data-accordion-trigger
+            >
+              Como é a recuperação de uma extração?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-recuperacao">
+              <p>
+                Usamos técnica minimamente invasiva, inclusive nos sisos, o que
+                deixa o pós-operatório mais tranquilo. Você sai daqui com as
+                orientações por escrito e com o nosso WhatsApp para qualquer
+                dúvida nos dias seguintes.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-gengiva"
+              aria-expanded="false"
+              aria-controls="faq-panel-gengiva"
+              data-accordion-trigger
+            >
+              Minha gengiva sangra ao escovar. Isso é grave?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-gengiva">
+              <p>
+                Gengiva que sangra não é normal, mesmo que não doa. É o primeiro
+                sinal de gengivite, e tratada cedo ela não vira periodontite — a
+                principal causa de perda de dentes em adultos.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-depois"
+              aria-expanded="false"
+              aria-controls="faq-panel-depois"
+              data-accordion-trigger
+            >
+              Depois do procedimento, com quem eu falo?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-depois">
+              <p>
+                Com a nossa equipe, direto pelo WhatsApp. O acompanhamento
+                pós-operatório não é um extra: faz parte do tratamento.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-lg)">
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20canal%2C%20extra%C3%A7%C3%A3o%20ou%20tratamento%20de%20gengiva."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20canal%2C%20extra%C3%A7%C3%A3o%20ou%20gengiva."
               class="btn btn--outline"
               id="cta-whatsapp-duvidas-cirurgias"
-              aria-label="Tire suas dúvidas com nossa equipe via WhatsApp"
+              aria-label="Tirar minha dúvida pelo WhatsApp"
               data-tracking="whatsapp-duvidas-cirurgias"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Tire suas dúvidas com nossa equipe via WhatsApp
+              Tirar minha dúvida
             </a>
           </div>
         </div>
       </section>
 
-      <!-- POR QUE ESCOLHER -->
+      <!-- QUEBRA DE OBJEÇÃO -->
       <section
-        class="section"
+        class="section section--tight"
         style="background-color: var(--color-bg-alt)"
-        aria-labelledby="porque-title"
+        aria-labelledby="frentes-title"
       >
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Por Que a Click Dente</span>
-            <h2 id="porque-title" class="section-title">
-              Preparados para Cuidar dos Casos Mais Delicados
-            </h2>
-          </div>
-          <ul class="split__list" style="max-width: 640px; margin-inline: auto">
+        <div class="container" style="max-width: 760px">
+          <h2 id="frentes-title" class="section-title">
+            Três frentes, um cuidado só
+          </h2>
+          <ul class="split__list">
             <li class="split__list-item">
-              <span class="split__list-icon"><svg-load name="check" /></span>
-              <div><strong>Diagnóstico Preciso.</strong> Identificamos a causa real da dor antes de agir.</div>
+              <span class="split__list-icon"><svg-load name="shield-check" /></span>
+              <div>
+                <strong>Endodontia (canal).</strong> Tecnologia moderna para um
+                tratamento rápido e indolor, que salva o dente e elimina a
+                infecção.
+              </div>
             </li>
             <li class="split__list-item">
               <span class="split__list-icon"><svg-load name="check" /></span>
-              <div><strong>Anestesia Eficaz.</strong> Seu conforto garantido do início ao fim.</div>
+              <div>
+                <strong>Cirurgias e extrações.</strong> Técnica minimamente
+                invasiva, inclusive para sisos, com recuperação tranquila.
+              </div>
             </li>
             <li class="split__list-item">
-              <span class="split__list-icon"><svg-load name="check" /></span>
-              <div><strong>Ambiente Preparado.</strong> Biossegurança e esterilização rigorosa na Rua Marechal Floriano.</div>
+              <span class="split__list-icon"><svg-load name="heart" /></span>
+              <div>
+                <strong>Periodontia (gengiva).</strong> Tratamos gengivite e
+                periodontite antes que virem perda de dente.
+              </div>
             </li>
             <li class="split__list-item">
-              <span class="split__list-icon"><svg-load name="whatsapp" /></span>
-              <div><strong>Acompanhamento Pós-Operatório.</strong> Suporte direto pelo WhatsApp após o procedimento.</div>
+              <span class="split__list-icon"><svg-load name="pin" /></span>
+              <div>
+                <strong>Ambiente preparado.</strong> Biossegurança e esterilização
+                rigorosa na Rua Marechal Floriano, no Centro de Valadares.
+              </div>
             </li>
           </ul>
         </div>
@@ -212,23 +296,21 @@
       <section class="section">
         <div class="container">
           <div class="cta-banner">
-            <h2 class="section-title">
-              Não Conviva com a Dor. Nós Podemos Ajudar Agora.
-            </h2>
+            <h2 class="section-title">Não conviva com a dor.</h2>
             <p class="section-subtitle">
-              Fale com a nossa equipe e agende um horário o quanto antes.
+              Se está doendo agora, fale com a nossa equipe. A gente encaixa.
             </p>
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20dor%20ou%20um%20tratamento%20urgente."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Estou%20com%20dor%20e%20preciso%20de%20atendimento."
               class="btn btn--on-dark"
               id="cta-whatsapp-final-cirurgias"
-              aria-label="Agende sua avaliação via WhatsApp agora"
+              aria-label="Falar agora pelo WhatsApp"
               data-tracking="whatsapp-final-cirurgias"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp agora
+              Falar agora
             </a>
           </div>
         </div>

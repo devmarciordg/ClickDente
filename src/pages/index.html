@@ -29,6 +29,28 @@
       fetchpriority="high"
     />
 
+    <!-- Preload do elemento LCP. Sem isto o navegador só descobre a imagem
+         depois do layout, o que custava 1.440 ms de atraso no relatório. -->
+    <link
+      rel="preload"
+      as="image"
+      media="(max-width: 767px)"
+      href="/images/home_hero_mobile-800.webp"
+      imagesrcset="/images/home_hero_mobile-400.webp 400w, /images/home_hero_mobile-800.webp 800w, /images/home_hero_mobile@2x.webp 1280w"
+      imagesizes="92vw"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      media="(min-width: 768px)"
+      href="/images/home_hero_desktop.webp"
+      imagesrcset="/images/home_hero_desktop.webp 1x, /images/home_hero_desktop@2x.webp 2x"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
     <html-include name="theme-init" />
   </head>
   <body>
@@ -58,18 +80,26 @@
             />
             <source
               srcset="
-                /images/home_hero_mobile.webp 1x,
-                /images/home_hero_mobile@2x.webp 2x
+                /images/home_hero_mobile-400.webp  400w,
+                /images/home_hero_mobile-800.webp  800w,
+                /images/home_hero_mobile@2x.webp   1280w
               "
+              sizes="92vw"
               type="image/webp"
             />
             <img
-              src="/images/home_hero_mobile.jpg"
-              srcset="/images/home_hero_mobile@2x.jpg 2x"
+              src="/images/home_hero_mobile-800.jpg"
+              srcset="
+                /images/home_hero_mobile-400.jpg  400w,
+                /images/home_hero_mobile-800.jpg  800w,
+                /images/home_hero_mobile@2x.jpg   1280w
+              "
+              sizes="92vw"
               alt="Equipe Click Dente - clínica odontológica em Governador Valadares"
               width="640"
               height="751"
-              loading="lazy"
+              fetchpriority="high"
+              decoding="async"
             />
           </picture>
         </div>
@@ -102,25 +132,26 @@
               <source
                 media="(max-width: 767px)"
                 srcset="
-                  /images/home_hero_mobile.webp 1x,
-                  /images/home_hero_mobile@2x.webp 2x
+                  /images/home_hero_mobile-400.webp  400w,
+                  /images/home_hero_mobile-800.webp  800w,
+                  /images/home_hero_mobile@2x.webp   1280w
                 "
+                sizes="92vw"
                 type="image/webp"
               />
-              <source
-                media="(max-width: 767px)"
-                srcset="
-                  /images/home_hero_mobile.jpg 1x,
-                  /images/home_hero_mobile@2x.jpg 2x
-                "
-              />
               <img
-                src="/images/home_hero_mobile.jpg"
-                srcset="/images/home_hero_mobile@2x.jpg 2x"
+                src="/images/home_hero_mobile-800.jpg"
+                srcset="
+                  /images/home_hero_mobile-400.jpg  400w,
+                  /images/home_hero_mobile-800.jpg  800w,
+                  /images/home_hero_mobile@2x.jpg   1280w
+                "
+                sizes="92vw"
                 alt="Equipe Click Dente"
                 width="640"
                 height="751"
-                loading="lazy"
+                fetchpriority="high"
+                decoding="async"
               />
             </picture>
           </div>
@@ -182,12 +213,22 @@
               <span class="card__media">
                 <picture>
                   <source
-                    srcset="/images/card-implantes-e-proteses.webp 1x, /images/card-implantes-e-proteses@2x.webp 2x"
+                    srcset="
+                      /images/card-implantes-e-proteses.webp      440w,
+                      /images/card-implantes-e-proteses-700.webp  700w,
+                      /images/card-implantes-e-proteses@2x.webp   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     type="image/webp"
                   />
                   <img
-                    src="/images/card-implantes-e-proteses.jpg"
-                    srcset="/images/card-implantes-e-proteses@2x.jpg 2x"
+                    src="/images/card-implantes-e-proteses-700.jpg"
+                    srcset="
+                      /images/card-implantes-e-proteses.jpg      440w,
+                      /images/card-implantes-e-proteses-700.jpg  700w,
+                      /images/card-implantes-e-proteses@2x.jpg   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     alt="Implantes e próteses dentárias na Click Dente"
                     width="440"
                     height="264"
@@ -219,12 +260,22 @@
               <span class="card__media">
                 <picture>
                   <source
-                    srcset="/images/card-estetica-e-harmonizacao.webp 1x, /images/card-estetica-e-harmonizacao@2x.webp 2x"
+                    srcset="
+                      /images/card-estetica-e-harmonizacao.webp      440w,
+                      /images/card-estetica-e-harmonizacao-700.webp  700w,
+                      /images/card-estetica-e-harmonizacao@2x.webp   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     type="image/webp"
                   />
                   <img
-                    src="/images/card-estetica-e-harmonizacao.jpg"
-                    srcset="/images/card-estetica-e-harmonizacao@2x.jpg 2x"
+                    src="/images/card-estetica-e-harmonizacao-700.jpg"
+                    srcset="
+                      /images/card-estetica-e-harmonizacao.jpg      440w,
+                      /images/card-estetica-e-harmonizacao-700.jpg  700w,
+                      /images/card-estetica-e-harmonizacao@2x.jpg   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     alt="Estética e harmonização orofacial na Click Dente"
                     width="440"
                     height="264"
@@ -257,12 +308,22 @@
               <span class="card__media">
                 <picture>
                   <source
-                    srcset="/images/card-ortodontia.webp 1x, /images/card-ortodontia@2x.webp 2x"
+                    srcset="
+                      /images/card-ortodontia.webp      440w,
+                      /images/card-ortodontia-700.webp  700w,
+                      /images/card-ortodontia@2x.webp   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     type="image/webp"
                   />
                   <img
-                    src="/images/card-ortodontia.jpg"
-                    srcset="/images/card-ortodontia@2x.jpg 2x"
+                    src="/images/card-ortodontia-700.jpg"
+                    srcset="
+                      /images/card-ortodontia.jpg      440w,
+                      /images/card-ortodontia-700.jpg  700w,
+                      /images/card-ortodontia@2x.jpg   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     alt="Tratamento ortodôntico na Click Dente"
                     width="440"
                     height="264"
@@ -295,12 +356,22 @@
               <span class="card__media">
                 <picture>
                   <source
-                    srcset="/images/card-clinica-geral-e-prevencao.webp 1x, /images/card-clinica-geral-e-prevencao@2x.webp 2x"
+                    srcset="
+                      /images/card-clinica-geral-e-prevencao.webp      440w,
+                      /images/card-clinica-geral-e-prevencao-700.webp  700w,
+                      /images/card-clinica-geral-e-prevencao@2x.webp   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     type="image/webp"
                   />
                   <img
-                    src="/images/card-clinica-geral-e-prevencao.jpg"
-                    srcset="/images/card-clinica-geral-e-prevencao@2x.jpg 2x"
+                    src="/images/card-clinica-geral-e-prevencao-700.jpg"
+                    srcset="
+                      /images/card-clinica-geral-e-prevencao.jpg      440w,
+                      /images/card-clinica-geral-e-prevencao-700.jpg  700w,
+                      /images/card-clinica-geral-e-prevencao@2x.jpg   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     alt="Clínica geral e prevenção na Click Dente"
                     width="440"
                     height="264"
@@ -333,12 +404,22 @@
               <span class="card__media">
                 <picture>
                   <source
-                    srcset="/images/card-cirurgias-e-especialidades.webp 1x, /images/card-cirurgias-e-especialidades@2x.webp 2x"
+                    srcset="
+                      /images/card-cirurgias-e-especialidades.webp      440w,
+                      /images/card-cirurgias-e-especialidades-700.webp  700w,
+                      /images/card-cirurgias-e-especialidades@2x.webp   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     type="image/webp"
                   />
                   <img
-                    src="/images/card-cirurgias-e-especialidades.jpg"
-                    srcset="/images/card-cirurgias-e-especialidades@2x.jpg 2x"
+                    src="/images/card-cirurgias-e-especialidades-700.jpg"
+                    srcset="
+                      /images/card-cirurgias-e-especialidades.jpg      440w,
+                      /images/card-cirurgias-e-especialidades-700.jpg  700w,
+                      /images/card-cirurgias-e-especialidades@2x.jpg   880w
+                    "
+                    sizes="(min-width: 960px) 24rem, 92vw"
                     alt="Cirurgias e especialidades odontológicas na Click Dente"
                     width="440"
                     height="264"
@@ -484,7 +565,7 @@
                   name="star"
                 /><svg-load name="star" /><svg-load name="star" />
               </span>
-              <span class="google-rating__score">4.9 no Google</span>
+              <span class="google-rating__score">5,0 no Google</span>
             </div>
           </div>
 

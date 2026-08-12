@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-08-12",
+    "scope": "app",
+    "macrostructure": "Quote-Led",
+    "theme": "design.md (tokens de marca Click Dente)",
+    "enrichment": "none — foto real de hero",
+    "brief": "Click Dente · 5 landing pages de tratamento, tráfego pago, WhatsApp como canal único",
+    "variants": {
+      "Urgencia": "Conversational FAQ — cirurgias, clinica-geral",
+      "Consideracao": "Narrative Workflow — implantes, estetica, ortodontia"
+    },
+    "nav": "header-lp (logo + CTA)",
+    "footer": "compartilhado, inalterado"
+  }
+]

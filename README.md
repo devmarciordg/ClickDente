@@ -51,7 +51,7 @@ Os pontos que mais pegam:
 
 ## Pendências conhecidas
 
-- **Contraste do `.btn--primary`.** Texto branco sobre `#1abaca` dá 2,36:1, contra os 4,5:1 exigidos. Corrigir exige escurecer o turquesa da marca — decisão do cliente.
+- **Cache-Control de 7 dias** em todos os assets (config do host). Os arquivos de `assets/` têm hash no nome e poderiam ir a 1 ano; as imagens ficariam bem com 30 dias.
 - **Domínio de produção.** `https://www.clickdente.com.br/` é placeholder nos `<link rel="canonical">`, no `sitemap.xml` e no `robots.txt`. Todos marcados com `TODO`.
 - **Redes sociais.** Os links do footer estão em `#` — faltam os handles reais.
 - **Repetição estrutural.** Seis grids de três colunas idênticas nas páginas de tratamento, e 31 eyebrows no site. Levantado em auditoria, ainda não resolvido.

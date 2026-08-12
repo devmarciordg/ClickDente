@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Implantes Dentários em Governador Valadares | Click Dente</title>
+    <title>Implantes e Próteses em Governador Valadares | Click Dente</title>
     <meta
       name="description"
-      content="Recupere sua confiança para sorrir e mastigar com implantes e próteses dentárias seguras, modernas e personalizadas na Click Dente, em Governador Valadares."
+      content="Implantes dentários e próteses com planejamento digital e materiais de alta qualidade na Click Dente, em Governador Valadares. Volte a mastigar com segurança."
     />
     <!-- TODO: confirmar domínio real de produção -->
     <link rel="canonical" href="https://www.clickdente.com.br/implantes-e-proteses/" />
@@ -43,35 +43,57 @@
   <body>
     <html-include name="page-loader" />
 
-    <html-include name="header" data-active="implantes" />
+    <html-include name="header-lp" />
 
     <main id="main-content">
-      <!-- HERO -->
-      <section class="hero section" aria-labelledby="hero-title">
-        <div class="container split">
-          <div class="hero__content">
-            <span class="eyebrow">Implantes e Próteses</span>
-            <h1 id="hero-title" class="section-title">
-              Volte a Sorrir e a Mastigar com Total Segurança e Confiança.
+      <!-- HERO QUOTE-LED -->
+      <section class="quote-hero" aria-labelledby="hero-title">
+        <div class="container quote-hero__inner">
+          <div>
+            <blockquote class="quote-hero__quote">
+              Meu tratamento foi melhor de todos, melhor clínica da região sem
+              comparação, fora tanto que são educadas, parabéns.
+            </blockquote>
+            <p class="quote-hero__attrib">
+              <span class="quote-hero__name">Kassandra Rilary</span>
+              <span class="quote-hero__source"
+                ><svg-load name="star" /> Avaliação no Google</span
+              >
+            </p>
+
+            <h1 id="hero-title" class="hero__title">
+              Voltar a mastigar sem pensar nisso.
             </h1>
             <p class="section-subtitle">
-              Soluções modernas e personalizadas para recuperar dentes
-              perdidos, com segurança, conforto e resultado natural.
+              Implantes e próteses com planejamento digital antes de qualquer
+              procedimento. Você vê o resultado antes de começar.
             </p>
-            <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20Implantes%20e%20Pr%C3%B3teses."
-              class="btn btn--primary"
-              id="cta-whatsapp-hero-implantes"
-              aria-label="Agende sua avaliação via WhatsApp"
-              data-tracking="whatsapp-hero-implantes"
-              target="_blank"
-              rel="noopener"
-            >
-              <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp
-            </a>
+
+            <div class="quote-hero__actions">
+              <a
+                href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20implantes."
+                class="btn btn--primary"
+                id="cta-whatsapp-hero-implantes"
+                aria-label="Agendar avaliação pelo WhatsApp"
+                data-tracking="whatsapp-hero-implantes"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg-load name="whatsapp" />
+                Agendar avaliação
+              </a>
+              <a
+                href="#etapas"
+                class="quote-hero__secondary"
+                id="anchor-etapas-implantes"
+                aria-label="Ver as etapas do tratamento"
+                data-tracking="anchor-etapas-implantes"
+                >Ver as etapas <svg-load name="chevron-down"
+              /></a>
+            </div>
           </div>
-          <div class="hero__media">
+
+          <div class="quote-hero__media">
             <picture>
               <source
                 srcset="
@@ -94,132 +116,133 @@
         </div>
       </section>
 
-      <!-- CONEXÃO -->
-      <section
-        class="section"
-        style="background-color: var(--color-bg-alt)"
-        aria-labelledby="conexao-title"
-      >
-        <div class="container" style="max-width: 760px; text-align: center">
-          <span class="eyebrow">Nós Entendemos Você</span>
-          <h2 id="conexao-title" class="section-title">
-            Nós Entendemos o Que Você Está Passando.
-          </h2>
-          <p class="section-subtitle" style="margin-inline: auto">
-            A perda de dentes afeta a forma de comer, de falar e a própria
-            confiança no dia a dia. Saiba que existe um caminho seguro,
-            previsível e confortável de volta. Estamos aqui para
-            percorrê-lo com você.
-          </p>
-        </div>
-      </section>
+      <html-include name="prova-social-compacta" />
 
-      <!-- COMO FUNCIONA -->
-      <section class="section" aria-labelledby="como-funciona-title">
-        <div class="container split">
-          <div class="split__media">
-            <div class="image-placeholder" style="min-height: 340px">
-              [Ilustração de planejamento digital 3D do sorriso]
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Como Funciona</span>
-            <h2 id="como-funciona-title" class="section-title">
-              Um Processo Planejado do Início ao Fim
-            </h2>
-            <ul class="split__list">
-              <li class="split__list-item">
-                <span class="split__list-icon"><svg-load name="check" /></span>
-                <div>
-                  <strong>Planejamento Digital.</strong> Cada detalhe do
-                  seu tratamento é simulado antes de começar.
-                </div>
-              </li>
-              <li class="split__list-item">
-                <span class="split__list-icon"
-                  ><svg-load name="shield-check"
-                /></span>
-                <div>
-                  <strong>Procedimento Seguro.</strong> Estrutura completa
-                  e protocolos rigorosos em todas as etapas.
-                </div>
-              </li>
-              <li class="split__list-item">
-                <span class="split__list-icon"><svg-load name="star" /></span>
-                <div>
-                  <strong>Materiais de Alta Qualidade.</strong> Durabilidade
-                  e resultado com aparência natural.
-                </div>
-              </li>
-            </ul>
+      <!-- MIOLO · variante Consideração: estágios numerados -->
+      <section class="section" id="etapas" aria-labelledby="etapas-title">
+        <div class="container">
+          <h2 id="etapas-title" class="section-title">
+            O que acontece, em que ordem
+          </h2>
+          <p class="section-subtitle">
+            Implante não é um procedimento único, é uma sequência. Saber onde
+            você está em cada momento é o que tira a ansiedade do processo.
+          </p>
+
+          <ol class="stage-list">
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Avaliação e diagnóstico</h3>
+                <p class="stage__text">
+                  Examinamos a condição do osso e da gengiva e entendemos o seu
+                  caso. Aqui você já sai sabendo se é candidato ao implante e o
+                  que o tratamento envolve.
+                </p>
+              </div>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Planejamento digital</h3>
+                <p class="stage__text">
+                  Cada detalhe é simulado antes de começar — posição, formato e
+                  cor. Você aprova o resultado na tela antes de ele existir na
+                  sua boca.
+                </p>
+              </div>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Colocação do implante</h3>
+                <p class="stage__text">
+                  O procedimento acontece com anestesia e protocolos rigorosos de
+                  biossegurança. Você sai com orientações por escrito e com o
+                  nosso WhatsApp para o pós-operatório.
+                </p>
+              </div>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Integração e acompanhamento</h3>
+                <p class="stage__text">
+                  O implante precisa se integrar ao osso antes de receber a
+                  prótese. Nesse intervalo você não fica sozinho — acompanhamos
+                  de perto até a próxima etapa.
+                </p>
+              </div>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Prótese definitiva</h3>
+                <p class="stage__text">
+                  A coroa é instalada com materiais de alta qualidade,
+                  ajustada até ficar confortável na mordida e natural no sorriso.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <div style="margin-top: var(--space-lg)">
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20implantes%20e%20gostaria%20de%20falar%20com%20a%20equipe."
-              class="btn btn--primary"
-              id="cta-whatsapp-duvidas-implantes"
-              aria-label="Tire suas dúvidas com nossa equipe via WhatsApp"
-              data-tracking="whatsapp-duvidas-implantes"
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20as%20etapas%20do%20implante."
+              class="btn btn--outline"
+              id="cta-whatsapp-etapas-implantes"
+              aria-label="Tirar minha dúvida pelo WhatsApp"
+              data-tracking="whatsapp-etapas-implantes"
               target="_blank"
               rel="noopener"
-              style="margin-top: var(--space-md)"
             >
               <svg-load name="whatsapp" />
-              Tire suas dúvidas com nossa equipe via WhatsApp
+              Tirar minha dúvida
             </a>
           </div>
         </div>
       </section>
 
-      <!-- BENEFÍCIOS -->
+      <!-- QUEBRA DE OBJEÇÃO -->
       <section
-        class="section"
+        class="section section--tight"
         style="background-color: var(--color-bg-alt)"
-        aria-labelledby="beneficios-title"
+        aria-labelledby="recupera-title"
       >
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">O Que Você Recupera</span>
-            <h2 id="beneficios-title" class="section-title">
-              Mais do Que Dentes: Qualidade de Vida
-            </h2>
-          </div>
-          <div class="grid grid--4">
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="heart" /></span>
-                <h3 class="card__title">Liberdade para Mastigar</h3>
+        <div class="container" style="max-width: 760px">
+          <h2 id="recupera-title" class="section-title">
+            O que você recupera junto com o dente
+          </h2>
+          <ul class="split__list">
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="heart" /></span>
+              <div>
+                <strong>Liberdade para mastigar.</strong> Coma o que quiser, sem
+                restrição e sem desconforto.
               </div>
-              <p class="card__text">
-                Coma o que quiser, sem restrições ou desconforto.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="check" /></span>
-                <h3 class="card__title">Segurança ao Falar</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="check" /></span>
+              <div>
+                <strong>Segurança ao falar.</strong> Sem prótese solta e sem
+                preocupação na hora de conversar.
               </div>
-              <p class="card__text">
-                Sem próteses soltas ou preocupação na hora de conversar.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="star" /></span>
-                <h3 class="card__title">Estética Natural</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="star" /></span>
+              <div>
+                <strong>Estética natural.</strong> Resultado que se integra ao
+                seu rosto, não que chama atenção.
               </div>
-              <p class="card__text">
-                Resultado que se integra ao seu sorriso com naturalidade.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="shield-check" /></span>
-                <h3 class="card__title">Resgate da Autoestima</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="shield-check" /></span>
+              <div>
+                <strong>Sorrir sem pensar duas vezes.</strong> A perda de dentes
+                mexe com a confiança. Devolver isso é parte do tratamento.
               </div>
-              <p class="card__text">
-                Volte a sorrir sem pensar duas vezes.
-              </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -228,23 +251,23 @@
         <div class="container">
           <div class="cta-banner">
             <h2 class="section-title">
-              O Seu Novo Sorriso Está Mais Perto do Que Você Imagina.
+              O primeiro passo é só uma conversa.
             </h2>
             <p class="section-subtitle">
-              Venha tomar um café com a gente na Rua Marechal Floriano e
-              descubra o melhor caminho para o seu caso.
+              A avaliação existe para você entender o seu caso — sem compromisso
+              de fechar nada.
             </p>
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20sobre%20implantes."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20avaliar%20se%20sou%20candidato%20a%20implante."
               class="btn btn--on-dark"
               id="cta-whatsapp-final-implantes"
-              aria-label="Agende sua avaliação via WhatsApp agora"
+              aria-label="Agendar avaliação pelo WhatsApp"
               data-tracking="whatsapp-final-implantes"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp agora
+              Agendar avaliação
             </a>
           </div>
         </div>

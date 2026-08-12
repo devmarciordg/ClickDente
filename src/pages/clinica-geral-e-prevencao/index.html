@@ -43,36 +43,57 @@
   <body>
     <html-include name="page-loader" />
 
-    <html-include name="header" data-active="clinica-geral" />
+    <html-include name="header-lp" />
 
     <main id="main-content">
-      <!-- HERO -->
-      <section class="hero section" aria-labelledby="hero-title">
-        <div class="container split">
-          <div class="hero__content">
-            <span class="eyebrow">Clínica Geral e Prevenção</span>
-            <h1 id="hero-title" class="section-title">
-              Saúde Bucal em Dia: O Primeiro Passo para um Sorriso Lindo e
-              Sem Dor.
+      <!-- HERO QUOTE-LED -->
+      <section class="quote-hero" aria-labelledby="hero-title">
+        <div class="container quote-hero__inner">
+          <div>
+            <blockquote class="quote-hero__quote">
+              Ótimo atendimento, profissionais capacitados e local aconchegante!
+              Super indico e voltaria novamente!!
+            </blockquote>
+            <p class="quote-hero__attrib">
+              <span class="quote-hero__name">Maria Eduarda</span>
+              <span class="quote-hero__source"
+                ><svg-load name="star" /> Avaliação no Google</span
+              >
+            </p>
+
+            <h1 id="hero-title" class="hero__title">
+              Acabou o medo do dentista.
             </h1>
             <p class="section-subtitle">
-              Limpeza, restaurações e check-ups regulares. O cuidado mais
-              simples é sempre o melhor investimento no seu sorriso.
+              Limpeza, restaurações e check-up no seu ritmo. Explicamos cada
+              passo antes de começar e respeitamos os seus limites.
             </p>
-            <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Click%20Dente."
-              class="btn btn--primary"
-              id="cta-whatsapp-hero-clinica"
-              aria-label="Agende sua avaliação via WhatsApp"
-              data-tracking="whatsapp-hero-clinica"
-              target="_blank"
-              rel="noopener"
-            >
-              <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp
-            </a>
+
+            <div class="quote-hero__actions">
+              <a
+                href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20limpeza%20ou%20check-up."
+                class="btn btn--primary"
+                id="cta-whatsapp-hero-clinica"
+                aria-label="Agendar avaliação pelo WhatsApp"
+                data-tracking="whatsapp-hero-clinica"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg-load name="whatsapp" />
+                Agendar avaliação
+              </a>
+              <a
+                href="#duvidas"
+                class="quote-hero__secondary"
+                id="anchor-duvidas-clinica"
+                aria-label="Ver dúvidas frequentes"
+                data-tracking="anchor-duvidas-clinica"
+                >Ver dúvidas frequentes <svg-load name="chevron-down"
+              /></a>
+            </div>
           </div>
-          <div class="hero__media">
+
+          <div class="quote-hero__media">
             <picture>
               <source
                 srcset="
@@ -95,139 +116,179 @@
         </div>
       </section>
 
-      <!-- FEAR-BREAKING -->
-      <section
-        class="section"
-        style="background-color: var(--color-bg-alt)"
-        aria-labelledby="medo-title"
-      >
-        <div class="container" style="max-width: 760px; text-align: center">
-          <span class="eyebrow">Sem Motivo para Ansiedade</span>
-          <h2 id="medo-title" class="section-title">
-            Acabou o Medo do "Motorzinho".
+      <html-include name="prova-social-compacta" />
+
+      <!-- MIOLO · variante Urgência: FAQ conversacional -->
+      <section class="section" id="duvidas" aria-labelledby="duvidas-title">
+        <div class="container" style="max-width: 720px">
+          <h2 id="duvidas-title" class="section-title">
+            Perguntas de quem está há tempo sem vir
           </h2>
-          <p class="section-subtitle" style="margin-inline: auto">
-            Explicamos cada passo antes de começar, usamos anestesia de
-            qualidade quando necessário e respeitamos o seu tempo e os seus
-            limites. Cuidar dos dentes pode (e deve) ser tranquilo.
-          </p>
-        </div>
-      </section>
 
-      <!-- SERVIÇOS -->
-      <section class="section" aria-labelledby="servicos-title">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Nossos Serviços</span>
-            <h2 id="servicos-title" class="section-title">
-              Cuidado Contínuo para uma Boca Saudável
-            </h2>
-          </div>
-
-          <div class="grid grid--3">
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="check" /></span>
-                <h3 class="card__title">Limpeza Profissional</h3>
-              </div>
-              <p class="card__text">
-                Remove tártaro e placa bacteriana de forma rápida e
-                indolor, deixando a gengiva mais saudável.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="star" /></span>
-                <h3 class="card__title">Restaurações Estéticas</h3>
-              </div>
-              <p class="card__text">
-                Resina na cor do dente, para reparar cáries ou traumas de
-                forma quase imperceptível.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="shield-check" /></span>
-                <h3 class="card__title">Check-up e Prevenção</h3>
-              </div>
-              <p class="card__text">
-                Diagnóstico precoce evita tratamentos mais complexos no
-                futuro. Economiza seu tempo e dinheiro.
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-julgamento"
+              aria-expanded="false"
+              aria-controls="faq-panel-julgamento"
+              data-accordion-trigger
+            >
+              Faz anos que não vou ao dentista. Vou ser julgado?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-julgamento">
+              <p>
+                Não. A gente atende gente que passou cinco, dez, vinte anos sem
+                vir — e o motivo quase sempre é medo, não descuido. Nosso
+                trabalho é te tirar dessa situação, não comentar como você
+                chegou nela.
               </p>
             </div>
           </div>
 
-          <div style="text-align: center; margin-top: var(--space-lg)">
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-motorzinho"
+              aria-expanded="false"
+              aria-controls="faq-panel-motorzinho"
+              data-accordion-trigger
+            >
+              Tenho pavor do barulho do motorzinho. E agora?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-motorzinho">
+              <p>
+                Avise a gente logo na chegada. Explicamos cada passo antes de
+                começar, usamos anestesia quando é necessário e paramos sempre
+                que você pedir. Nenhum procedimento começa sem o seu aval.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-limpeza"
+              aria-expanded="false"
+              aria-controls="faq-panel-limpeza"
+              data-accordion-trigger
+            >
+              A limpeza dói ou deixa o dente sensível?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-limpeza">
+              <p>
+                A limpeza remove tártaro e placa e costuma ser tranquila. Quando
+                a gengiva já está inflamada, pode haver sensibilidade — e é
+                justamente por isso que quanto antes você vier, mais confortável
+                é o procedimento.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-frequencia"
+              aria-expanded="false"
+              aria-controls="faq-panel-frequencia"
+              data-accordion-trigger
+            >
+              De quanto em quanto tempo preciso voltar?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-frequencia">
+              <p>
+                Depende do seu caso — quem tem tendência a tártaro ou gengivite
+                volta com mais frequência. Definimos o intervalo junto com você
+                na avaliação, e não antes de te conhecer.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-restauracao"
+              aria-expanded="false"
+              aria-controls="faq-panel-restauracao"
+              data-accordion-trigger
+            >
+              A restauração vai aparecer quando eu sorrir?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-restauracao">
+              <p>
+                Usamos resina na cor do seu dente, o que deixa o reparo quase
+                imperceptível. O objetivo é que ninguém note — inclusive você,
+                depois de alguns dias.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-lg)">
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20limpeza%20na%20Click%20Dente."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20limpeza%20ou%20check-up."
               class="btn btn--outline"
-              id="cta-whatsapp-limpeza-clinica"
-              aria-label="Quero agendar minha limpeza via WhatsApp"
-              data-tracking="whatsapp-limpeza-clinica"
+              id="cta-whatsapp-duvidas-clinica"
+              aria-label="Tirar minha dúvida pelo WhatsApp"
+              data-tracking="whatsapp-duvidas-clinica"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Quero agendar minha limpeza via WhatsApp
+              Tirar minha dúvida
             </a>
           </div>
         </div>
       </section>
 
-      <!-- VALOR DA PREVENÇÃO -->
+      <!-- QUEBRA DE OBJEÇÃO -->
       <section
-        class="section"
+        class="section section--tight"
         style="background-color: var(--color-bg-alt)"
-        aria-labelledby="valor-title"
+        aria-labelledby="prevencao-title"
       >
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Por Que Prevenir</span>
-            <h2 id="valor-title" class="section-title">
-              Prevenção é o Melhor Investimento no Seu Sorriso
-            </h2>
-          </div>
-          <div class="grid grid--4">
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="shield-check" /></span>
-                <h3 class="card__title">Zero Dor no Futuro</h3>
+        <div class="container" style="max-width: 760px">
+          <h2 id="prevencao-title" class="section-title">
+            Prevenir custa menos que corrigir
+          </h2>
+          <ul class="split__list">
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="check" /></span>
+              <div>
+                <strong>Limpeza profissional.</strong> Remove tártaro e placa de
+                forma rápida, deixando a gengiva mais saudável.
               </div>
-              <p class="card__text">
-                Problemas tratados cedo evitam procedimentos dolorosos
-                depois.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="check" /></span>
-                <h3 class="card__title">Economia Financeira</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="star" /></span>
+              <div>
+                <strong>Restaurações estéticas.</strong> Resina na cor do dente
+                para reparar cáries ou traumas sem aparecer.
               </div>
-              <p class="card__text">
-                Tratamentos preventivos custam muito menos que os
-                corretivos.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="heart" /></span>
-                <h3 class="card__title">Hálito Sempre Fresco</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="shield-check" /></span>
+              <div>
+                <strong>Check-up e diagnóstico precoce.</strong> Problema
+                encontrado cedo evita tratamento complexo depois.
               </div>
-              <p class="card__text">
-                Uma boca saudável é sinônimo de mais confiança no dia a dia.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="star" /></span>
-                <h3 class="card__title">Longevidade</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="heart" /></span>
+              <div>
+                <strong>Zero dor no futuro.</strong> A consulta de rotina é o que
+                impede a emergência de amanhã.
               </div>
-              <p class="card__text">
-                Protege o investimento feito em implantes e lentes de
-                contato dental.
-              </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -236,23 +297,23 @@
         <div class="container">
           <div class="cta-banner">
             <h2 class="section-title">
-              Há Quanto Tempo Você Não Vai ao Dentista?
+              Há quanto tempo você não vai ao dentista?
             </h2>
             <p class="section-subtitle">
-              Agende seu check-up na Rua Marechal Floriano, no Centro de
-              Governador Valadares.
+              Seja qual for a resposta, o primeiro passo é o mesmo. Comece por
+              uma conversa.
             </p>
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20de%20cl%C3%ADnica%20geral%20e%20preven%C3%A7%C3%A3o."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
               class="btn btn--on-dark"
               id="cta-whatsapp-final-clinica"
-              aria-label="Agende sua avaliação via WhatsApp agora"
+              aria-label="Agendar avaliação pelo WhatsApp"
               data-tracking="whatsapp-final-clinica"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp agora
+              Agendar avaliação
             </a>
           </div>
         </div>

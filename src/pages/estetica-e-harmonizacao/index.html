@@ -43,35 +43,57 @@
   <body>
     <html-include name="page-loader" />
 
-    <html-include name="header" data-active="estetica" />
+    <html-include name="header-lp" />
 
     <main id="main-content">
-      <!-- HERO -->
-      <section class="hero section" aria-labelledby="hero-title">
-        <div class="container split">
-          <div class="hero__content">
-            <span class="eyebrow">Estética e Harmonização Orofacial</span>
-            <h1 id="hero-title" class="section-title">
-              A Melhor Versão do Seu Sorriso (e de Você).
+      <!-- HERO QUOTE-LED -->
+      <section class="quote-hero" aria-labelledby="hero-title">
+        <div class="container quote-hero__inner">
+          <div>
+            <blockquote class="quote-hero__quote">
+              Excelentes profissionais, é fato você ver o amor e o cuidar com os
+              pacientes e com os colegas de trabalho.
+            </blockquote>
+            <p class="quote-hero__attrib">
+              <span class="quote-hero__name">Marta Loiola</span>
+              <span class="quote-hero__source"
+                ><svg-load name="star" /> Avaliação no Google</span
+              >
+            </p>
+
+            <h1 id="hero-title" class="hero__title">
+              Natural o suficiente para ninguém perguntar.
             </h1>
             <p class="section-subtitle">
               Clareamento, lentes de contato dental e harmonização orofacial
-              com resultados naturais, sem exageros, com segurança.
+              planejados a partir das proporções do seu rosto — não de um molde.
             </p>
-            <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20Est%C3%A9tica%20e%20Harmoniza%C3%A7%C3%A3o."
-              class="btn btn--primary"
-              id="cta-whatsapp-hero-estetica"
-              aria-label="Agende sua avaliação via WhatsApp"
-              data-tracking="whatsapp-hero-estetica"
-              target="_blank"
-              rel="noopener"
-            >
-              <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp
-            </a>
+
+            <div class="quote-hero__actions">
+              <a
+                href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20est%C3%A9tica."
+                class="btn btn--primary"
+                id="cta-whatsapp-hero-estetica"
+                aria-label="Agendar avaliação pelo WhatsApp"
+                data-tracking="whatsapp-hero-estetica"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg-load name="whatsapp" />
+                Agendar avaliação
+              </a>
+              <a
+                href="#etapas"
+                class="quote-hero__secondary"
+                id="anchor-etapas-estetica"
+                aria-label="Ver as etapas do planejamento"
+                data-tracking="anchor-etapas-estetica"
+                >Ver as etapas <svg-load name="chevron-down"
+              /></a>
+            </div>
           </div>
-          <div class="hero__media">
+
+          <div class="quote-hero__media">
             <picture>
               <source
                 srcset="
@@ -94,131 +116,126 @@
         </div>
       </section>
 
-      <!-- SOLUÇÕES -->
-      <section class="section" aria-labelledby="solucoes-title">
+      <html-include name="prova-social-compacta" />
+
+      <!-- MIOLO · variante Consideração: estágios numerados -->
+      <section class="section" id="etapas" aria-labelledby="etapas-title">
         <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Nossas Soluções</span>
-            <h2 id="solucoes-title" class="section-title">
-              Cada Detalhe do Seu Sorriso, Pensado com Cuidado
-            </h2>
-          </div>
+          <h2 id="etapas-title" class="section-title">
+            Do rosto para o sorriso, nessa ordem
+          </h2>
+          <p class="section-subtitle">
+            Resultado natural não sai de catálogo. Ele sai de um planejamento que
+            começa no seu rosto e só depois chega aos dentes.
+          </p>
 
-          <div class="grid grid--3">
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="star" /></span>
-                <h3 class="card__title">Clareamento Dental</h3>
+          <ol class="stage-list">
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Análise facial</h3>
+                <p class="stage__text">
+                  Antes de falar em dente, olhamos proporção do rosto, linha do
+                  sorriso e tom de pele. É o que separa um resultado seu de um
+                  resultado padronizado.
+                </p>
               </div>
-              <p class="card__text">
-                Gel de alta qualidade, com sensibilidade minimizada e um
-                branco natural.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="heart" /></span>
-                <h3 class="card__title">Lentes de Contato Dental</h3>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Planejamento do sorriso</h3>
+                <p class="stage__text">
+                  Definimos formato, tamanho e cor junto com você. Nada é
+                  executado antes de você entender e aprovar o que foi
+                  planejado.
+                </p>
               </div>
-              <p class="card__text">
-                Facetas ultrafinas de porcelana, o "sorriso das estrelas",
-                com técnica minimamente invasiva.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="check" /></span>
-                <h3 class="card__title">Harmonização Orofacial</h3>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Clareamento, quando indicado</h3>
+                <p class="stage__text">
+                  Gel de alta qualidade com a sensibilidade minimizada, buscando
+                  um branco natural — não o branco de anúncio.
+                </p>
               </div>
-              <p class="card__text">
-                Procedimentos estéticos faciais com resultado sutil, sem
-                exageros.
-              </p>
-            </div>
-          </div>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Lentes ou harmonização</h3>
+                <p class="stage__text">
+                  Facetas ultrafinas de porcelana com técnica minimamente
+                  invasiva, ou procedimentos faciais de resultado sutil. A
+                  escolha depende do que a análise mostrou.
+                </p>
+              </div>
+            </li>
+            <li class="stage">
+              <span class="stage__num" aria-hidden="true"></span>
+              <div>
+                <h3 class="stage__title">Ajuste e acompanhamento</h3>
+                <p class="stage__text">
+                  O resultado é refinado até você se reconhecer no espelho. Essa
+                  última etapa é a que costuma ser pulada por aí, e é a que faz
+                  diferença.
+                </p>
+              </div>
+            </li>
+          </ol>
 
-          <div style="text-align: center; margin-top: var(--space-lg)">
+          <div style="margin-top: var(--space-lg)">
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20transformar%20meu%20sorriso%20na%20Click%20Dente."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20clareamento%2C%20lentes%20ou%20harmoniza%C3%A7%C3%A3o."
               class="btn btn--outline"
-              id="cta-whatsapp-transformar-estetica"
-              aria-label="Quero transformar meu sorriso via WhatsApp"
-              data-tracking="whatsapp-transformar-estetica"
+              id="cta-whatsapp-etapas-estetica"
+              aria-label="Tirar minha dúvida pelo WhatsApp"
+              data-tracking="whatsapp-etapas-estetica"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Quero transformar meu sorriso via WhatsApp
+              Tirar minha dúvida
             </a>
           </div>
         </div>
       </section>
 
-      <!-- FILOSOFIA -->
+      <!-- QUEBRA DE OBJEÇÃO -->
       <section
-        class="section"
+        class="section section--tight"
         style="background-color: var(--color-bg-alt)"
         aria-labelledby="filosofia-title"
       >
-        <div class="container split split--reverse">
-          <div class="split__media">
-            <div class="image-placeholder" style="min-height: 320px">
-              [Foto do planejamento estético: análise facial e proporções
-              do sorriso]
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Nossa Filosofia</span>
-            <h2 id="filosofia-title" class="section-title">
-              Beleza é Sinônimo de Naturalidade e Segurança.
-            </h2>
-            <p class="section-subtitle">
-              Cada plano é individualizado, considerando as proporções do
-              seu rosto, o tom da sua pele e a naturalidade dos seus dentes.
-              Você participa de cada etapa do planejamento.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- IMPACTO EMOCIONAL -->
-      <section class="section" aria-labelledby="impacto-title">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">O Que Você Ganha</span>
-            <h2 id="impacto-title" class="section-title">
-              Muito Além da Estética
-            </h2>
-          </div>
-          <div class="grid grid--3">
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="check" /></span>
-                <h3 class="card__title">Confiança Imediata</h3>
+        <div class="container" style="max-width: 760px">
+          <h2 id="filosofia-title" class="section-title">
+            Beleza aqui é sinônimo de naturalidade
+          </h2>
+          <ul class="split__list">
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="check" /></span>
+              <div>
+                <strong>Plano individual.</strong> Considerando as proporções do
+                seu rosto, o tom da sua pele e a naturalidade dos seus dentes.
               </div>
-              <p class="card__text">
-                Sorria sem pensar duas vezes em qualquer situação.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="star" /></span>
-                <h3 class="card__title">Primeira Impressão Inesquecível</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="star" /></span>
+              <div>
+                <strong>Você participa de cada etapa.</strong> Nenhuma decisão
+                estética é tomada sobre você sem estar com você.
               </div>
-              <p class="card__text">
-                Um sorriso que fala por você antes mesmo de você falar.
-              </p>
-            </div>
-            <div class="card">
-              <div class="card__head">
-                <span class="card__icon"><svg-load name="heart" /></span>
-                <h3 class="card__title">Amor Próprio</h3>
+            </li>
+            <li class="split__list-item">
+              <span class="split__list-icon"><svg-load name="heart" /></span>
+              <div>
+                <strong>Sem exageros.</strong> O objetivo é a melhor versão do
+                seu sorriso, não a substituição dele por outro.
               </div>
-              <p class="card__text">
-                Se olhar no espelho e gostar do que vê, todos os dias.
-              </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -226,21 +243,21 @@
       <section class="section">
         <div class="container">
           <div class="cta-banner">
-            <h2 class="section-title">Pronta para Brilhar?</h2>
+            <h2 class="section-title">Vamos planejar o seu?</h2>
             <p class="section-subtitle">
-              Dê o primeiro passo para o sorriso que você sempre quis ter.
+              Comece pela análise. O plano vem depois, e ele é feito com você.
             </p>
             <a
-              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20sobre%20est%C3%A9tica%20e%20harmoniza%C3%A7%C3%A3o."
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20planejar%20o%20meu%20sorriso."
               class="btn btn--on-dark"
               id="cta-whatsapp-final-estetica"
-              aria-label="Agende sua avaliação via WhatsApp agora"
+              aria-label="Agendar avaliação pelo WhatsApp"
               data-tracking="whatsapp-final-estetica"
               target="_blank"
               rel="noopener"
             >
               <svg-load name="whatsapp" />
-              Agende sua avaliação via WhatsApp agora
+              Agendar avaliação
             </a>
           </div>
         </div>
