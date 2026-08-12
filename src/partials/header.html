@@ -1,0 +1,209 @@
+<a href="#main-content" class="skip-link" id="skip-to-content"
+  >Pular para o conteúdo</a
+>
+
+<header class="header" id="site-header">
+  <div class="container header__inner">
+    <a
+      href="/"
+      class="header__logo"
+      id="logo-header-home"
+      aria-label="Click Dente - Página inicial"
+      data-tracking="logo-header"
+    >
+      <img src="/images/logo-tipo2.svg" alt="Click Dente" width="240" height="48" />
+    </a>
+
+    <nav class="header__nav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li>
+          <a
+            href="/"
+            class="nav__link"
+            data-nav="home"
+            id="nav-home"
+            aria-label="Ir para a Home"
+            data-tracking="nav-home"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/sobre-a-clinica/"
+            class="nav__link"
+            data-nav="sobre"
+            id="nav-sobre"
+            aria-label="Ir para Sobre a Clínica"
+            data-tracking="nav-sobre"
+            >Sobre a Clínica</a
+          >
+        </li>
+        <li class="nav__item--dropdown">
+          <button
+            type="button"
+            class="nav__link nav__trigger"
+            id="nav-tratamentos-trigger"
+            aria-label="Abrir submenu de Tratamentos"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="dropdown-tratamentos"
+            data-dropdown-trigger
+          >
+            Tratamentos
+            <svg-load name="chevron-down" />
+          </button>
+          <div class="nav__dropdown" id="dropdown-tratamentos">
+            <a
+              href="/implantes-e-proteses/"
+              class="nav__dropdown-link"
+              data-nav="implantes"
+              id="nav-implantes"
+              aria-label="Ir para Implantes e Próteses"
+              data-tracking="nav-implantes"
+              >Implantes e Próteses</a
+            >
+            <a
+              href="/estetica-e-harmonizacao/"
+              class="nav__dropdown-link"
+              data-nav="estetica"
+              id="nav-estetica"
+              aria-label="Ir para Estética e Harmonização"
+              data-tracking="nav-estetica"
+              >Estética e Harmonização</a
+            >
+            <a
+              href="/ortodontia/"
+              class="nav__dropdown-link"
+              data-nav="ortodontia"
+              id="nav-ortodontia"
+              aria-label="Ir para Ortodontia"
+              data-tracking="nav-ortodontia"
+              >Ortodontia</a
+            >
+            <a
+              href="/clinica-geral-e-prevencao/"
+              class="nav__dropdown-link"
+              data-nav="clinica-geral"
+              id="nav-clinica-geral"
+              aria-label="Ir para Clínica Geral e Prevenção"
+              data-tracking="nav-clinica-geral"
+              >Clínica Geral e Prevenção</a
+            >
+            <a
+              href="/cirurgias-e-especialidades/"
+              class="nav__dropdown-link"
+              data-nav="cirurgias"
+              id="nav-cirurgias"
+              aria-label="Ir para Cirurgias e Especialidades"
+              data-tracking="nav-cirurgias"
+              >Cirurgias e Especialidades</a
+            >
+          </div>
+        </li>
+        <li>
+          <a
+            href="/contato-e-localizacao/"
+            class="nav__link"
+            data-nav="contato"
+            id="nav-contato"
+            aria-label="Ir para Contato e Localização"
+            data-tracking="nav-contato"
+            >Contato</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a
+        href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Click%20Dente."
+        class="btn btn--primary header__cta"
+        id="cta-whatsapp-header"
+        aria-label="Agendar avaliação pelo WhatsApp"
+        data-tracking="whatsapp-header"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg-load name="whatsapp" />
+        Agendar Avaliação
+      </a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        data-menu-toggle
+      >
+        <span class="icon-open"><svg-load name="menu" /></span>
+        <span class="icon-close"><svg-load name="close" /></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" data-mobile-nav>
+  <ul class="mobile-nav__list">
+    <li><a href="/" class="mobile-nav__link" data-nav="home">Home</a></li>
+    <li>
+      <a href="/sobre-a-clinica/" class="mobile-nav__link" data-nav="sobre"
+        >Sobre a Clínica</a
+      >
+    </li>
+    <li>
+      <span class="mobile-nav__link">Tratamentos</span>
+      <div class="mobile-nav__submenu">
+        <a
+          href="/implantes-e-proteses/"
+          class="mobile-nav__sublink"
+          data-nav="implantes"
+          >Implantes e Próteses</a
+        >
+        <a
+          href="/estetica-e-harmonizacao/"
+          class="mobile-nav__sublink"
+          data-nav="estetica"
+          >Estética e Harmonização</a
+        >
+        <a href="/ortodontia/" class="mobile-nav__sublink" data-nav="ortodontia"
+          >Ortodontia</a
+        >
+        <a
+          href="/clinica-geral-e-prevencao/"
+          class="mobile-nav__sublink"
+          data-nav="clinica-geral"
+          >Clínica Geral e Prevenção</a
+        >
+        <a
+          href="/cirurgias-e-especialidades/"
+          class="mobile-nav__sublink"
+          data-nav="cirurgias"
+          >Cirurgias e Especialidades</a
+        >
+      </div>
+    </li>
+    <li>
+      <a
+        href="/contato-e-localizacao/"
+        class="mobile-nav__link"
+        data-nav="contato"
+        >Contato e Localização</a
+      >
+    </li>
+  </ul>
+
+  <a
+    href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Click%20Dente."
+    class="btn btn--primary btn--block mobile-nav__cta"
+    id="cta-whatsapp-mobile-menu"
+    aria-label="Agendar avaliação pelo WhatsApp"
+    data-tracking="whatsapp-mobile-menu"
+    target="_blank"
+    rel="noopener"
+  >
+    <svg-load name="whatsapp" />
+    Agendar Avaliação
+  </a>
+</div>

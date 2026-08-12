@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato e Localização | Clínica Click Dente em Gov. Valadares</title>
+    <meta
+      name="description"
+      content="Endereço, horário de atendimento e WhatsApp da Click Dente no Centro de Governador Valadares. Agende sua visita e venha nos conhecer."
+    />
+    <!-- TODO: confirmar domínio real de produção -->
+    <link rel="canonical" href="https://www.clickdente.com.br/contato-e-localizacao/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link
+      rel="preload"
+      href="/fonts/montserrat-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      fetchpriority="high"
+    />
+
+    <html-include name="theme-init" />
+  </head>
+  <body>
+    <html-include name="page-loader" />
+
+    <html-include name="header" data-active="contato" />
+
+    <main id="main-content">
+      <!-- HERO -->
+      <section class="hero section" aria-labelledby="hero-title">
+        <div class="container split">
+          <div class="hero__content">
+            <span class="eyebrow">Contato e Localização</span>
+            <h1 id="hero-title" class="section-title">
+              Estamos Prontos para Receber Você.
+            </h1>
+            <p class="section-subtitle">
+              No Centro de Governador Valadares, com horários flexíveis e
+              atendimento rápido pelo WhatsApp.
+            </p>
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20recep%C3%A7%C3%A3o%20da%20Click%20Dente."
+              class="btn btn--primary"
+              id="cta-whatsapp-hero-contato"
+              aria-label="Falar com a recepção via WhatsApp"
+              data-tracking="whatsapp-hero-contato"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Falar com a recepção via WhatsApp
+            </a>
+          </div>
+          <div class="hero__media">
+            <picture>
+              <source
+                srcset="/images/fachada-clickdente.webp 1x, /images/fachada-clickdente@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                  src="/images/fachada-clickdente.jpg"
+                  srcset="/images/fachada-clickdente@2x.jpg 2x"
+                  alt="Fachada da Clínica Click Dente"
+                  width="540"
+                  height="405"
+                  loading="lazy"
+                  style="width: 100%; height: auto; border-radius: var(--radius);"
+                />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAPA + INFO -->
+      <section class="section" aria-labelledby="localizacao-title">
+        <div class="container split">
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=Rua+Marechal+Floriano,+1268+-+Centro,+Governador+Valadares+-+MG&output=embed"
+              title="Localização da Click Dente no mapa"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div>
+            <span class="eyebrow">Onde Estamos</span>
+            <h2 id="localizacao-title" class="section-title">
+              Fácil de Chegar, Fácil de Agendar
+            </h2>
+            <ul class="info-list">
+              <li class="info-list__item">
+                <span class="info-list__icon"><svg-load name="pin" /></span>
+                <div>
+                  <p class="info-list__title">Endereço</p>
+                  <p class="info-list__text">
+                    Rua Marechal Floriano, 1268 - Centro, Governador
+                    Valadares - MG
+                  </p>
+                </div>
+              </li>
+              <li class="info-list__item">
+                <span class="info-list__icon"><svg-load name="clock" /></span>
+                <div>
+                  <p class="info-list__title">Horário de Atendimento</p>
+                  <p class="info-list__text">
+                    Segunda a Sexta: 08h às 18h<br />
+                    Sábado: 08h às 12h
+                  </p>
+                </div>
+              </li>
+              <li class="info-list__item">
+                <span class="info-list__icon"><svg-load name="whatsapp" /></span>
+                <div>
+                  <p class="info-list__title">Atendimento Digital</p>
+                  <p class="info-list__text">
+                    Fale com a nossa recepção pelo WhatsApp para tirar
+                    dúvidas ou agendar sua visita.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20minha%20visita%20%C3%A0%20Click%20Dente."
+              class="btn btn--primary"
+              id="cta-whatsapp-visita-contato"
+              aria-label="Agendar minha visita pelo WhatsApp"
+              data-tracking="whatsapp-visita-contato"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Agendar minha visita pelo WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section
+        class="section"
+        style="background-color: var(--color-bg-alt)"
+        aria-labelledby="faq-title"
+      >
+        <div class="container" style="max-width: 720px">
+          <div class="section-header">
+            <span class="eyebrow">Perguntas Frequentes</span>
+            <h2 id="faq-title" class="section-title">Tire Suas Dúvidas</h2>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-1"
+              aria-expanded="false"
+              aria-controls="faq-panel-1"
+              data-accordion-trigger
+            >
+              Como funciona a primeira avaliação?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-1">
+              <p>
+                Fazemos um check-up completo para entender suas necessidades
+                e montamos um plano de tratamento personalizado, explicado
+                passo a passo com você.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-2"
+              aria-expanded="false"
+              aria-controls="faq-panel-2"
+              data-accordion-trigger
+            >
+              A clínica atende crianças?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-2">
+              <p>
+                Sim! Oferecemos atendimento humanizado para todas as
+                idades, incluindo os pequenos.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button
+              type="button"
+              class="accordion-trigger"
+              id="faq-trigger-3"
+              aria-expanded="false"
+              aria-controls="faq-panel-3"
+              data-accordion-trigger
+            >
+              O agendamento demora?
+              <svg-load name="chevron-down" />
+            </button>
+            <div class="accordion-panel" id="faq-panel-3">
+              <p>
+                Não. Respondemos rápido pelo WhatsApp e encontramos um
+                horário que encaixe na sua rotina.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <h2 class="section-title">
+              O Seu Novo Sorriso Está a Uma Mensagem de Distância.
+            </h2>
+            <p class="section-subtitle">
+              Fale com a gente agora mesmo e agende sua avaliação.
+            </p>
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20na%20Click%20Dente%20agora."
+              class="btn btn--on-dark"
+              id="cta-whatsapp-final-contato"
+              aria-label="Agendar minha avaliação via WhatsApp agora"
+              data-tracking="whatsapp-final-contato"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Agendar minha avaliação via WhatsApp agora
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <html-include name="footer" />
+    <html-include name="whatsapp-float" />
+
+    <script type="module" src="@/js/main.js"></script>
+  </body>
+</html>

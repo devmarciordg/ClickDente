@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dentista em Governador Valadares | Clínica Click Dente</title>
+    <meta
+      name="description"
+      content="Transforme o seu sorriso com atendimento humanizado em Governador Valadares. Implantes, estética dental, ortodontia e muito mais. Agende sua avaliação pelo WhatsApp."
+    />
+    <!-- TODO: confirmar domínio real de produção -->
+    <link rel="canonical" href="https://www.clickdente.com.br/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link
+      rel="preload"
+      href="/fonts/montserrat-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      fetchpriority="high"
+    />
+
+    <html-include name="theme-init" />
+  </head>
+  <body>
+    <html-include name="page-loader" />
+
+    <html-include name="header" data-active="home" />
+
+    <main id="main-content">
+      <!-- HERO -->
+      <section class="hero section hero--with-image" aria-labelledby="hero-title">
+        <div class="hero__bg">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /images/home_hero_desktop.webp 1x,
+                /images/home_hero_desktop@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                /images/home_hero_desktop.jpg 1x,
+                /images/home_hero_desktop@2x.jpg 2x
+              "
+            />
+            <source
+              srcset="
+                /images/home_hero_mobile.webp 1x,
+                /images/home_hero_mobile@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              src="/images/home_hero_mobile.jpg"
+              srcset="/images/home_hero_mobile@2x.jpg 2x"
+              alt="Equipe Click Dente - clínica odontológica em Governador Valadares"
+              width="640"
+              height="751"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <div class="container split hero__container">
+          <div class="hero__content">
+            <span class="eyebrow">Click Dente · Governador Valadares</span>
+            <h1 id="hero-title" class="section-title">
+              O Seu Novo Sorriso Começa com um Atendimento que Entende Você.
+            </h1>
+            <p class="section-subtitle">
+              Cuidado odontológico humanizado, seguro e tecnológico no
+              Centro de Governador Valadares. Sem pressa, sem julgamentos,
+              você comanda o seu tempo.
+            </p>
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Click%20Dente."
+              class="btn btn--primary"
+              id="cta-whatsapp-hero-home"
+              aria-label="Agende sua avaliação via WhatsApp"
+              data-tracking="whatsapp-hero-home"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Agende sua avaliação via WhatsApp
+            </a>
+          </div>
+          <div class="hero__media">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  /images/home_hero_mobile.webp 1x,
+                  /images/home_hero_mobile@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  /images/home_hero_mobile.jpg 1x,
+                  /images/home_hero_mobile@2x.jpg 2x
+                "
+              />
+              <img
+                src="/images/home_hero_mobile.jpg"
+                srcset="/images/home_hero_mobile@2x.jpg 2x"
+                alt="Equipe Click Dente"
+                width="640"
+                height="751"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST BAR -->
+      <section class="trust-bar-section" aria-label="Diferenciais Click Dente">
+        <div class="container">
+          <div class="trust-bar">
+            <div class="trust-bar__item">
+              <span class="trust-bar__icon"><svg-load name="heart" /></span>
+              <span class="trust-bar__label">100% Atendimento Humanizado</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__icon"
+                ><svg-load name="shield-check"
+              /></span>
+              <span class="trust-bar__label"
+                >Procedimentos Seguros e de Alta Tecnologia</span
+              >
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__icon"><svg-load name="pin" /></span>
+              <span class="trust-bar__label"
+                >Fácil Acesso no Centro de GV</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESPECIALIDADES -->
+      <section
+        class="specialties section"
+        id="tratamentos"
+        aria-labelledby="specialties-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Nossos Tratamentos</span>
+            <h2 id="specialties-title" class="section-title">
+              Cuidado Completo para Cada Fase do Seu Sorriso
+            </h2>
+            <p class="section-subtitle">
+              Da prevenção à alta complexidade, tudo em um só lugar, sempre
+              com o mesmo cuidado humanizado em cada etapa.
+            </p>
+          </div>
+
+          <div class="grid grid--5">
+            <a
+              href="/implantes-e-proteses/"
+              class="card card--link card--media"
+              id="card-implantes-home"
+              aria-label="Ver tratamento: Implantes e Próteses"
+              data-tracking="card-implantes-home"
+            >
+              <span class="card__media">
+                <picture>
+                  <source
+                    srcset="/images/card-implantes-e-proteses.webp 1x, /images/card-implantes-e-proteses@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/card-implantes-e-proteses.jpg"
+                    srcset="/images/card-implantes-e-proteses@2x.jpg 2x"
+                    alt="Implantes e próteses dentárias na Click Dente"
+                    width="440"
+                    height="264"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+              <div class="card__head">
+                <span class="card__icon"><svg-load name="shield-check" /></span>
+                <h3 class="card__title">Implantes e Próteses</h3>
+              </div>
+              <p class="card__text">
+                Volte a sorrir e mastigar com total segurança e confiança.
+              </p>
+              <span class="card__cta"
+                >Ver tratamento <svg-load name="arrow-right"
+              /></span
+              >
+            </a>
+
+            <a
+              href="/estetica-e-harmonizacao/"
+              class="card card--link card--media"
+              id="card-estetica-home"
+              aria-label="Ver tratamento: Estética e Harmonização Orofacial"
+              data-tracking="card-estetica-home"
+            >
+              <span class="card__media">
+                <picture>
+                  <source
+                    srcset="/images/card-estetica-e-harmonizacao.webp 1x, /images/card-estetica-e-harmonizacao@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/card-estetica-e-harmonizacao.jpg"
+                    srcset="/images/card-estetica-e-harmonizacao@2x.jpg 2x"
+                    alt="Estética e harmonização orofacial na Click Dente"
+                    width="440"
+                    height="264"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+              <div class="card__head">
+                <span class="card__icon"><svg-load name="star" /></span>
+                <h3 class="card__title">Estética e Harmonização Orofacial</h3>
+              </div>
+              <p class="card__text">
+                A melhor versão do seu sorriso, com naturalidade e
+                segurança.
+              </p>
+              <span class="card__cta"
+                >Ver tratamento <svg-load name="arrow-right"
+              /></span
+              >
+            </a>
+
+            <a
+              href="/ortodontia/"
+              class="card card--link card--media"
+              id="card-ortodontia-home"
+              aria-label="Ver tratamento: Ortodontia"
+              data-tracking="card-ortodontia-home"
+            >
+              <span class="card__media">
+                <picture>
+                  <source
+                    srcset="/images/card-ortodontia.webp 1x, /images/card-ortodontia@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/card-ortodontia.jpg"
+                    srcset="/images/card-ortodontia@2x.jpg 2x"
+                    alt="Tratamento ortodôntico na Click Dente"
+                    width="440"
+                    height="264"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+              <div class="card__head">
+                <span class="card__icon"><svg-load name="check" /></span>
+                <h3 class="card__title">Ortodontia</h3>
+              </div>
+              <p class="card__text">
+                O caminho mais seguro para um sorriso perfeitamente
+                alinhado.
+              </p>
+              <span class="card__cta"
+                >Ver tratamento <svg-load name="arrow-right"
+              /></span
+              >
+            </a>
+
+            <a
+              href="/clinica-geral-e-prevencao/"
+              class="card card--link card--media"
+              id="card-clinica-geral-home"
+              aria-label="Ver tratamento: Clínica Geral e Prevenção"
+              data-tracking="card-clinica-geral-home"
+            >
+              <span class="card__media">
+                <picture>
+                  <source
+                    srcset="/images/card-clinica-geral-e-prevencao.webp 1x, /images/card-clinica-geral-e-prevencao@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/card-clinica-geral-e-prevencao.jpg"
+                    srcset="/images/card-clinica-geral-e-prevencao@2x.jpg 2x"
+                    alt="Clínica geral e prevenção na Click Dente"
+                    width="440"
+                    height="264"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+              <div class="card__head">
+                <span class="card__icon"><svg-load name="heart" /></span>
+                <h3 class="card__title">Clínica Geral e Prevenção</h3>
+              </div>
+              <p class="card__text">
+                Saúde bucal em dia: o primeiro passo para um sorriso lindo
+                e sem dor.
+              </p>
+              <span class="card__cta"
+                >Ver tratamento <svg-load name="arrow-right"
+              /></span
+              >
+            </a>
+
+            <a
+              href="/cirurgias-e-especialidades/"
+              class="card card--link card--media"
+              id="card-cirurgias-home"
+              aria-label="Ver tratamento: Cirurgias e Especialidades"
+              data-tracking="card-cirurgias-home"
+            >
+              <span class="card__media">
+                <picture>
+                  <source
+                    srcset="/images/card-cirurgias-e-especialidades.webp 1x, /images/card-cirurgias-e-especialidades@2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/card-cirurgias-e-especialidades.jpg"
+                    srcset="/images/card-cirurgias-e-especialidades@2x.jpg 2x"
+                    alt="Cirurgias e especialidades odontológicas na Click Dente"
+                    width="440"
+                    height="264"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+              <div class="card__head">
+                <span class="card__icon"><svg-load name="clock" /></span>
+                <h3 class="card__title">Cirurgias e Especialidades</h3>
+              </div>
+              <p class="card__text">
+                Alívio imediato com procedimentos seguros, canal e extrações sem dor.
+              </p>
+              <span class="card__cta"
+                >Ver tratamento <svg-load name="arrow-right"
+              /></span
+              >
+            </a>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--space-lg)">
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20na%20Click%20Dente."
+              class="btn btn--outline"
+              id="cta-whatsapp-especialidades-home"
+              aria-label="Quero agendar minha avaliação via WhatsApp"
+              data-tracking="whatsapp-especialidades-home"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Quero agendar minha avaliação via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTORIDADE / DIFERENCIAIS -->
+      <section
+        class="authority section"
+        style="background-color: var(--color-bg-alt)"
+        aria-labelledby="authority-title"
+      >
+        <div class="container split">
+          <div class="split__media">
+            <picture>
+              <source
+                srcset="/images/pq-a-clickdente-1.webp 1x, /images/pq-a-clickdente-1@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                  src="/images/pq-a-clickdente-1.jpg"
+                  srcset="/images/pq-a-clickdente-1@2x.jpg 2x"
+                  alt="Fachada e interior da Clínica Click Dente"
+                  width="600"
+                  height="285"
+                  loading="lazy"
+                  style="width: 100%; height: auto; border-radius: var(--radius);"
+                />
+            </picture>
+            <picture>
+              <source
+                srcset="/images/pq-a-clickdente-2.webp 1x, /images/pq-a-clickdente-2@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                  src="/images/pq-a-clickdente-2.jpg"
+                  srcset="/images/pq-a-clickdente-2@2x.jpg 2x"
+                  alt="Recepção acolhedora da Clínica Click Dente"
+                  width="600"
+                  height="285"
+                  loading="lazy"
+                  style="width: 100%; height: auto; border-radius: var(--radius);"
+                />
+            </picture>
+          </div>
+          <div>
+            <span class="eyebrow">Por Que a Click Dente</span>
+            <h2 id="authority-title" class="section-title">
+              Uma Estrutura Pensada para Acabar com o Medo do Dentista
+            </h2>
+            <p class="section-subtitle">
+              Sabemos que ir ao dentista pode gerar ansiedade. Por isso
+              preparamos cada detalhe da nossa clínica para que você se
+              sinta seguro, respeitado e bem cuidado.
+            </p>
+            <ul class="split__list">
+              <li class="split__list-item">
+                <span class="split__list-icon"><svg-load name="check" /></span>
+                <div>
+                  <strong>Estrutura Preparada.</strong> Um ambiente moderno,
+                  confortável e pensado para o seu bem-estar.
+                </div>
+              </li>
+              <li class="split__list-item">
+                <span class="split__list-icon"><svg-load name="check" /></span>
+                <div>
+                  <strong>Segurança em 1º Lugar.</strong> Biossegurança e
+                  protocolos rigorosos em todos os procedimentos.
+                </div>
+              </li>
+              <li class="split__list-item">
+                <span class="split__list-icon"><svg-load name="check" /></span>
+                <div>
+                  <strong>Localização Privilegiada.</strong> Rua Marechal
+                  Floriano, 1268, Centro de Governador Valadares.
+                </div>
+              </li>
+            </ul>
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20Click%20Dente."
+              class="btn btn--primary"
+              id="cta-whatsapp-autoridade-home"
+              aria-label="Fale com nossa equipe via WhatsApp"
+              data-tracking="whatsapp-autoridade-home"
+              target="_blank"
+              rel="noopener"
+              style="margin-top: var(--space-md)"
+            >
+              <svg-load name="whatsapp" />
+              Fale com nossa equipe via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROVA SOCIAL -->
+      <section
+        class="social-proof section"
+        aria-labelledby="social-proof-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Prova Social</span>
+            <h2 id="social-proof-title" class="section-title">
+              Quem Já Passou por Aqui, Recomenda
+            </h2>
+            <div class="google-rating">
+              <span class="testimonial-card__stars">
+                <svg-load name="star" /><svg-load name="star" /><svg-load
+                  name="star"
+                /><svg-load name="star" /><svg-load name="star" />
+              </span>
+              <span class="google-rating__score">4.9 no Google</span>
+            </div>
+          </div>
+
+          <div data-carousel>
+            <div class="testimonials" data-carousel-track>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjVu04oxP68phgN1tswzIbEj50HUyqs1OdltSWtekeDDq4FPf--Auw=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Alice Francisca de Cássia Silveira"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Alice Francisca de Cássia Silveira</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Minha experiência foi excelente. Fui bem tratada pelas
+                  recepcionistas e Doutoras. Oferece um tratamento de
+                  excelente qualidade. Parabéns a toda equipe."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjXg7NQ3qDSE_l2m6fRb5Kupcuph8bRAcxLxo8TvjgEphKt0MnVk=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Dalva Curvelo"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Dalva Curvelo</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Atendimento excelente, tanto as profissionais como as
+                  atendentes, eu super indico."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjVNVrKxEUXh3h-oN_Nt5MMSX5TQ2SDL6TTJx5IYjAgQH4L9-pYh=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Treice Gomes"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Treice Gomes</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "A melhor que tem atendimento de ótima qualidade
+                  profissionais excelente super recomendo 🙂"
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocLM7xGpDvM1oqg5ndGuqL6L0Hb2TAIaTq2lX8lZDc-XbHaW7A=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Edite Rosa"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Edite Rosa</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Primeiramente gostaria de parabenizar a todos os
+                  funcionários e em especial a Dra Akassia pelo excelente
+                  trabalho. A Clickdente me recepcionou muito bem desde o
+                  primeiro dia do tratamento. [...] inteiramente recomendo!"
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjWmoeuVjqsGCICjvVCZolQQhtblY52QrNo2qtBpAv8Bmjnv9sIJQg=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Nikholas Gherardi"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Nikholas Gherardi</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Excelente atendimento, desde agilidade na resposta até ao
+                  atendimento e pós-cirúrgico. Muito atenciosos. Acordei com
+                  meu siso inflamado, marquei avaliação e extraí no mesmo
+                  dia e quase não sentir dores. Super tranquilo."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocL4k2Pp1En95caSS-u4bUkQSEeydYh0aLiZdFjEeWnC4MpjZg=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Celso Henrique"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Celso Henrique</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Melhor atendimento, estrutura impecável, seriedade e
+                  ótimos serviços!"
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjXFF0jiIWiIU38BKx-5xnUdF2m8unVtmbNw36bKMqjlsfyN9iTG=s64-c-rp-mo-ba12-br100"
+                    alt="Foto de perfil de Thiago H."
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Thiago H.</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Tive uma experiência excelente na Clickdente
+                  Odontologia! Desde o primeiro contato, fui muito bem
+                  atendido pela equipe da recepção, que foi atenciosa,
+                  prestativa e sempre disposta a ajudar."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocJIFhmDvJJcyr_TXLZAGHqI3lloQZrjcA7MRFqF95RIIVrFSw=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Marta Loiola"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Marta Loiola</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Excelentes profissionais, é fato você ver o amor e o
+                  cuidar com os pacientes e com os colegas de trabalho. Sou
+                  apaixonada nessa clínica, índico pra todo mundooo."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocLWZFemug0iobGHNMuWk2aULfQ5mvgW0Cb_JjfU8N5gbzttGg=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Maria Eduarda"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Maria Eduarda</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Ótimo atendimento, profissionais capacitados e local
+                  aconchegante! Super indico e voltaria novamente!!"
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocLOCgBUUYVsRYrGLZYdGutGE08YQyMI0Dr5CpTeMoEB2bmCrw=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Edson Alves dos Santos Alves"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Edson Alves dos Santos Alves</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Ótimo, toda equipe e a equipe gestora. Todos com muito
+                  amor, dedicação. Demonstrado profissionalismo e amor ao
+                  próximo. Deus abençoe todos vcs."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjUg5hL8gbodt1EwX30ChwfhtwiGD-Sc4u9QW5p1VHZBAutRvsU=s64-c-rp-mo-ba12-br100"
+                    alt="Foto de perfil de Miqueias Oliveira"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Miqueias Oliveira</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "A clínica odontológica oferece um atendimento de
+                  excelência, com profissionais qualificados e atenciosos. O
+                  ambiente é acolhedor e a estrutura é moderna e bem
+                  equipada. Os procedimentos são realizados com cuidado, e o
+                  tempo de espera é mínimo."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjXsZx3FIfYiP83q6xNhnAjhyzZgGI9Kxr-F_RZfoChMu6VNaoxZ=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Thenrice Costa"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Thenrice Costa</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Super indico, excelente atendimento e profissionais de
+                  alta qualidade. Vim de longe pra conhecer o trabalho
+                  deles e espero voltar mais vezes."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjXUZnZnhxg0kz7Ny5f4BoIE8e5T_beyEDNRLg8LQuStX7Aawcrp=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Kassandra Rilary"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Kassandra Rilary</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Meu tratamento foi melhor de todos, melhor clínica da
+                  região sem comparação, fora tanto que são educadas,
+                  parabéns."
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+              <article class="testimonial-card card">
+                <div class="testimonial-card__header">
+                  <img
+                    src="https://lh3.googleusercontent.com/a-/ALV-UjUGhKeWP8xSHT0xdT_9PPP3LP6nZ8AQeaiSnZu_4-uyE1FgqbQ=s64-c-rp-mo-br100"
+                    alt="Foto de perfil de Duda Gomes"
+                    class="testimonial-card__avatar"
+                    width="44"
+                    height="44"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  />
+                  <div>
+                    <p class="testimonial-card__author">Duda Gomes</p>
+                    <span class="testimonial-card__stars">
+                    <svg-load name="star" /><svg-load name="star" /><svg-load
+                      name="star"
+                    /><svg-load name="star" /><svg-load name="star" />
+                    </span>
+                  </div>
+                </div>
+                <p class="testimonial-card__quote">
+                  "Atendimento excelente com profissionais que atende o
+                  que promete 😍🥰 amei!!!"
+                </p>
+                <span class="testimonial-card__source">Avaliação no Google</span>
+              </article>
+            </div>
+
+            <div class="testimonials-nav">
+              <button
+                type="button"
+                class="testimonials-nav__btn"
+                id="testimonials-prev"
+                aria-label="Depoimento anterior"
+                data-carousel-prev
+              >
+                <svg-load name="chevron-left" />
+              </button>
+              <button
+                type="button"
+                class="testimonials-nav__btn"
+                id="testimonials-next"
+                aria-label="Próximo depoimento"
+                data-carousel-next
+              >
+                <svg-load name="chevron-right" />
+              </button>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--space-lg)">
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20dar%20o%20primeiro%20passo%20para%20o%20meu%20novo%20sorriso."
+              class="btn btn--primary"
+              id="cta-whatsapp-depoimentos-home"
+              aria-label="Dê o primeiro passo para o seu novo sorriso via WhatsApp"
+              data-tracking="whatsapp-depoimentos-home"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Dê o primeiro passo para o seu novo sorriso
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <h2 class="section-title">
+              Pronta para Transformar a Sua Autoestima?
+            </h2>
+            <p class="section-subtitle">
+              Dê o primeiro passo agora. Nossa equipe está pronta para te
+              receber com todo cuidado que você merece.
+            </p>
+            <a
+              href="https://wa.me/553399249144?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20agora%20na%20Click%20Dente."
+              class="btn btn--on-dark"
+              id="cta-whatsapp-final-home"
+              aria-label="Agende sua avaliação via WhatsApp agora"
+              data-tracking="whatsapp-final-home"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg-load name="whatsapp" />
+              Agende sua avaliação via WhatsApp agora
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <html-include name="footer" />
+    <html-include name="whatsapp-float" />
+
+    <script type="module" src="@/js/main.js"></script>
+  </body>
+</html>

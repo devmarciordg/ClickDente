@@ -1,0 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivo morto de mídia (originais brutos, PNGs substituídos, não utilizadas).
+# Fora do build — versionar 68 MB de originais não faz sentido no repositório.
+# Ver _assets-fonte/README.md antes de apagar qualquer coisa de lá.
+# Exclui o conteúdo, não a pasta: com `_assets-fonte/` o git nunca reavalia
+# nada dentro dela e a negação do README seria ignorada.
+_assets-fonte/*
+!_assets-fonte/README.md

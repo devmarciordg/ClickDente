@@ -1,0 +1,13 @@
+# Normaliza a quebra de linha no repositório para LF. Sem isto o resultado
+# depende do core.autocrlf de cada máquina e um checkout no Windows gera diff
+# no arquivo inteiro.
+* text=auto eol=lf
+
+# Binários — nunca normalizar.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.woff2 binary
+*.ico binary
+*.pdf binary

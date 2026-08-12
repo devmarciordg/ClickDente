@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card — 8 estados · Click Dente</title>
+    <style>
+      /* Hallmark · component: card · genre: editorial · theme: tokens do projeto
+       * states: default · hover · focus · active · disabled · loading · error · success
+       * contrast: pass — foco 4,01:1 · texto 4,5:1+ · ícone 4,01:1
+       * pre-emit critique: P4 H5 E5 S5 R5 V4
+       *
+       * WRAPPER DESCARTÁVEL — não faz parte do build. Abra, confira, apague.
+       * Os tokens abaixo são cópia de src/scss/_variables.scss; o bloco .card é
+       * cópia de src/scss/_components.scss. Se divergirem, a fonte é o SCSS.
+       */
+      :root {
+        --color-primary: #51257c;
+        --color-primary-light: #f4effa;
+        --color-secondary: #1abaca;
+        --color-secondary-dark: #148c99;
+        --color-bg: #ffffff;
+        --color-bg-alt: #faf8fc;
+        --color-text: #22202a;
+        --color-text-muted: #6b6673;
+        --color-border: #e8e4ee;
+        --color-error: #b3261e;
+        --color-success: #1e7a4d;
+
+        --font-heading: 'Montserrat', system-ui, sans-serif;
+        --font-body: 'Inter', system-ui, sans-serif;
+
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2.5rem;
+
+        --radius: 12px;
+        --shadow-card: 0 1px 2px rgba(34, 24, 51, 0.04),
+          0 8px 24px rgba(81, 37, 124, 0.08);
+
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+        --dur-micro: 120ms;
+        --dur-short: 220ms;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: var(--space-lg) var(--space-md);
+        background-color: var(--color-bg-alt);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        line-height: 1.6;
+      }
+
+      .wrap {
+        max-width: 60rem;
+        margin-inline: auto;
+      }
+
+      h1 {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        margin: 0 0 var(--space-xs);
+      }
+
+      .lede {
+        color: var(--color-text-muted);
+        font-size: 0.9rem;
+        margin: 0 0 var(--space-lg);
+        max-width: 46ch;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: minmax(0, 8rem) minmax(0, 24rem);
+        gap: var(--space-md);
+        align-items: start;
+        margin-bottom: var(--space-lg);
+      }
+
+      .row__label {
+        font-family: var(--font-heading);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-secondary-dark);
+        padding-top: var(--space-md);
+      }
+
+      .row__note {
+        grid-column: 1 / -1;
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
+        margin-top: calc(var(--space-sm) * -1);
+      }
+
+      /* ---- cópia fiel do componente ---- */
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: var(--space-md);
+        box-shadow: var(--shadow-card);
+        overflow: hidden;
+      }
+
+      .card__head {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-xs);
+      }
+
+      .card__icon {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        height: calc(1.1rem * 1.3);
+        color: var(--color-secondary-dark);
+      }
+
+      .card__icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .card__title {
+        min-width: 0;
+        margin: 0;
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+      }
+
+      .card__text {
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        text-wrap: pretty;
+        margin: 0;
+      }
+
+      .card__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        min-height: 44px;
+        margin-top: auto;
+        padding-top: var(--space-sm);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--color-primary);
+      }
+
+      .card__cta svg {
+        width: 1em;
+        height: 1em;
+        transition: transform var(--dur-micro) var(--ease-out);
+      }
+
+      .card--media {
+        padding-top: 0;
+      }
+
+      .card__media {
+        display: block;
+        margin: 0 calc(var(--space-md) * -1) var(--space-md);
+        overflow: hidden;
+      }
+
+      .card__media img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5 / 3;
+        object-fit: cover;
+        background-color: var(--color-primary-light);
+      }
+
+      a.card--link {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-color var(--dur-short) var(--ease-out);
+      }
+
+      @media (hover: hover) {
+        a.card--link:hover,
+        a.card--link.is-hover {
+          border-color: var(--color-secondary-dark);
+        }
+        a.card--link:hover .card__cta svg,
+        a.card--link.is-hover .card__cta svg {
+          transform: translateX(3px);
+        }
+      }
+
+      a.card--link:focus-visible,
+      a.card--link.is-focus {
+        outline: 2px solid var(--color-secondary-dark);
+        outline-offset: 2px;
+        border-radius: inherit;
+      }
+
+      a.card--link:active,
+      a.card--link.is-active {
+        border-color: var(--color-primary);
+      }
+
+      a.card--link[aria-disabled='true'],
+      a.card--link.is-disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      a.card--link[data-state='loading'] {
+        cursor: progress;
+      }
+
+      a.card--link[data-state='loading']::after {
+        content: '';
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 2px;
+        background-color: var(--color-secondary);
+        transform-origin: left;
+        animation: card-progress 1.2s var(--ease-in-out) infinite;
+      }
+
+      @keyframes card-progress {
+        0% {
+          transform: scaleX(0);
+        }
+        60% {
+          transform: scaleX(0.75);
+        }
+        100% {
+          transform: scaleX(1);
+        }
+      }
+
+      a.card--link[data-state='error'] {
+        border-color: var(--color-error);
+      }
+      a.card--link[data-state='error'] .card__cta {
+        color: var(--color-error);
+      }
+
+      a.card--link[data-state='success'] {
+        border-color: var(--color-success);
+      }
+      a.card--link[data-state='success'] .card__cta {
+        color: var(--color-success);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        a.card--link[data-state='loading']::after {
+          animation: none;
+          transform: scaleX(1);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .row {
+          grid-template-columns: minmax(0, 1fr);
+          gap: var(--space-xs);
+        }
+        .row__label {
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg hidden aria-hidden="true">
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </symbol>
+    </svg>
+
+    <div class="wrap">
+      <h1>Card — 8 estados</h1>
+      <p class="lede">
+        Wrapper descartável. As classes <code>.is-*</code> forçam cada estado
+        para que os oito apareçam de uma vez; em produção quem dispara são as
+        pseudo-classes reais.
+      </p>
+
+      <div class="row">
+        <div class="row__label">1 · default</div>
+        <a href="#" class="card card--link">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Ver tratamento <svg><use href="#i-arrow" /></svg></span>
+        </a>
+      </div>
+
+      <div class="row">
+        <div class="row__label">2 · hover</div>
+        <a href="#" class="card card--link is-hover">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Ver tratamento <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Um sinal no card: a borda vira acento (4,01:1 contra o branco). A
+          seta do CTA avança 3px — mas isso é a própria afordância, não um
+          segundo efeito. Sem elevação, sem troca de sombra, sem zoom.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">3 · focus</div>
+        <a href="#" class="card card--link is-focus">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Ver tratamento <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Anel de 2px em <code>--color-secondary-dark</code> (4,01:1 contra o
+          branco). Aparece instantâneo — nunca em transição.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">4 · active</div>
+        <a href="#" class="card card--link is-active">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Ver tratamento <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Borda vai para a primária — mais escura que o hover, então o
+          press se distingue de quem só está passando por cima.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">5 · disabled</div>
+        <a href="#" class="card card--link is-disabled" aria-disabled="true" tabindex="-1">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Agenda fechada para novos casos até o fim do mês.
+          </p>
+          <span class="card__cta">Indisponível</span>
+        </a>
+        <p class="row__note">
+          Três sinais independentes — opacidade, cursor e
+          <code>aria-disabled</code>. O motivo vai no texto, nunca só na cor.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">6 · loading</div>
+        <a href="#" class="card card--link" data-state="loading">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Abrindo… <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Hairline de progresso na base durante a transição de página. Com
+          <code>prefers-reduced-motion</code> vira barra estática.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">7 · error</div>
+        <a href="#" class="card card--link" data-state="error">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Não foi possível carregar a página. Tente de novo.
+          </p>
+          <span class="card__cta">Tentar de novo <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Provisionado, ainda não usado no site. Borda + rótulo mudam juntos —
+          nunca só a cor.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">8 · success</div>
+        <a href="#" class="card card--link" data-state="success">
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Agendado <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Provisionado, ainda não usado no site. Discreto — sucesso não merece
+          festa.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="row__label">variante media</div>
+        <a href="#" class="card card--link card--media">
+          <span class="card__media">
+            <img
+              src="../public/images/card-implantes-e-proteses.jpg"
+              srcset="../public/images/card-implantes-e-proteses@2x.jpg 2x"
+              alt="Implantes e próteses dentárias na Click Dente"
+              width="440"
+              height="264"
+            />
+          </span>
+          <div class="card__head">
+            <span class="card__icon"><svg><use href="#i-shield" /></svg></span>
+            <h3 class="card__title">Implantes e Próteses</h3>
+          </div>
+          <p class="card__text">
+            Volte a sorrir e mastigar com total segurança e confiança.
+          </p>
+          <span class="card__cta">Ver tratamento <svg><use href="#i-arrow" /></svg></span>
+        </a>
+        <p class="row__note">
+          Mesma voz do card estático — ícone alinhado ao título, sem badge em
+          gradiente sobreposto à foto.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

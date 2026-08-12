@@ -1,0 +1,84 @@
+:root {
+  // Cores — Identidade Click Dente
+  --color-primary: #51257c;
+  --color-primary-dark: #3c1c5c;
+  --color-primary-light: #f4effa;
+  --color-icon-tint: #e7f7f8;
+  --color-secondary: #1abaca;
+  --color-secondary-dark: #148c99;
+  --color-bg: #ffffff;
+  --color-bg-alt: #faf8fc;
+  --color-text: #22202a;
+  --color-text-muted: #6b6673;
+  --color-border: #e8e4ee;
+  --color-white: #ffffff;
+
+  // Estado — usados por componentes interativos (ver .card--link)
+  --color-error: #b3261e;
+  --color-success: #1e7a4d;
+  --color-rating: #f5b301; // estrelas de depoimento
+  --color-whatsapp: #25d366; // cor de marca do WhatsApp
+
+  // Tipografia
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  // Espaçamento
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-section: clamp(3rem, 6vw, 6rem);
+  --container-width: 1200px;
+  --container-padding: clamp(1.25rem, 4vw, 2.5rem);
+
+  // Forma / Elevação
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-full: 999px;
+  --shadow-card:
+    0 1px 2px rgba(34, 24, 51, 0.04), 0 8px 24px rgba(81, 37, 124, 0.08);
+  --shadow-card-hover:
+    0 2px 4px rgba(34, 24, 51, 0.06), 0 20px 40px rgba(81, 37, 124, 0.18);
+  --shadow-header: 0 8px 24px rgba(34, 24, 51, 0.06);
+
+  // Movimento
+  // `ease` é o default do browser — uma curva não escolhida. Estas três são.
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); // entrando
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0); // saindo
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); // alternando estado
+
+  --dur-micro: 120ms; // press, tick, troca de cor
+  --dur-short: 220ms; // hover, tooltip, menu
+  --dur-long: 420ms; // modal, drawer, reveal
+
+  // Nomes preservados: o resto do site já consome estes dois.
+  --transition-fast: var(--dur-micro) var(--ease-out);
+  --transition-base: var(--dur-short) var(--ease-out);
+}
+
+// Tema Premium (Easter Egg) — ativado SOMENTE via ?theme=premium na URL.
+// Setado como atributo em <html> pelo script inline em src/partials/theme-init.html
+// antes do primeiro paint (evita FOUC). Não existe controle visível na UI.
+:root[data-theme='premium'] {
+  --color-primary: #c9a227;
+  --color-primary-dark: #a8871c;
+  --color-primary-light: #211a2c;
+  --color-icon-tint: #241d2a;
+  --color-secondary: #8a6dd1;
+  --color-secondary-dark: #6f52b5;
+  --color-bg: #0f0c14;
+  --color-bg-alt: #17121e;
+  --color-text: #f2eee6;
+  --color-text-muted: #b9b2c4;
+  --color-border: #2a2333;
+  --color-error: #f2b8b5;
+  --color-success: #7fd6a8;
+  --color-rating: #f5b301;
+  --color-whatsapp: #25d366;
+  --shadow-card:
+    0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(201, 162, 39, 0.12);
+  --shadow-card-hover:
+    0 2px 4px rgba(0, 0, 0, 0.35), 0 20px 40px rgba(201, 162, 39, 0.22);
+  --shadow-header: 0 8px 24px rgba(0, 0, 0, 0.4);
+}

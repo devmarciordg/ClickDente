@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+Disallow: /cgi-bin/
+Disallow: /admin/
+
+# TODO: confirmar domínio real de produção antes de subir.
+Sitemap: https://www.clickdente.com.br/sitemap.xml
+
+# Bots de anúncio precisam alcançar qualquer landing page, inclusive as
+# com parâmetro de campanha (?gclid=, ?utm_source=, ?fbclid=).
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
